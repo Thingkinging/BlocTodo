@@ -1,5 +1,6 @@
 import 'package:bloc_todo/bloc/todo_bloc.dart';
 import 'package:bloc_todo/data/todo.dart';
+import 'package:bloc_todo/data/todo_db.dart';
 import 'package:bloc_todo/todo_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -47,6 +48,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    // _testData();
     Todo todo = Todo('', '', '', 0);
     todos = todoBloc!.todoList;
     return Scaffold(
@@ -71,7 +73,7 @@ class _HomePageState extends State<HomePage> {
                       child: Text("${snapshot.data[index].priority}"),
                     ),
                     title: Text("${snapshot.data[index].name}"),
-                    subtitle: Text("${snapshot.data[index].decription}"),
+                    subtitle: Text("${snapshot.data[index].description}"),
                     trailing: IconButton(
                       icon: Icon(Icons.edit),
                       onPressed: () {

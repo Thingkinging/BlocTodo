@@ -1,13 +1,13 @@
 class Todo {
   int? id;
   String name;
-  String decription;
+  String description;
   String completeBy;
   int priority;
 
   Todo(
     this.name,
-    this.decription,
+    this.description,
     this.completeBy,
     this.priority,
   );
@@ -15,7 +15,7 @@ class Todo {
   Map<String, dynamic> toMap() {
     return {
       'name': name,
-      'description': decription,
+      'description': description,
       'completeBy': completeBy,
       'priority': priority,
     };
@@ -23,6 +23,6 @@ class Todo {
 
   static Todo fromMap(Map<String, dynamic> map) {
     return Todo(
-        map['name'], map['decription'], map['completeBy'], map['priority']);
+        map['name'], map['description'], map['completeBy'], map['priority']);
   }
 }

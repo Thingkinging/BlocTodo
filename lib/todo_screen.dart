@@ -20,7 +20,7 @@ class TodoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final double padding = 20.0;
     txtName.text = todo.name;
-    txtDescription.text = todo.decription;
+    txtDescription.text = todo.description;
     txtCompleteBy.text = todo.completeBy;
     txtPriority.text = todo.priority.toString();
 
@@ -96,7 +96,7 @@ class TodoScreen extends StatelessWidget {
 
   Future save() async {
     todo.name = txtName.text;
-    todo.decription = txtDescription.text;
+    todo.description = txtDescription.text;
     todo.completeBy = txtCompleteBy.text;
     todo.priority = int.parse(txtPriority.text);
 
